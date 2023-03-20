@@ -55,7 +55,7 @@
 //   let result = [];
 //   let temp = {};
 
-//   // Iterate through the array and group the elements by their type
+//   
 //   for (let i = 0; i < arr1.length; i++) {
 //     let type = typeof arr1[i];
 //     if (!temp[type]) {
