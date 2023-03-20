@@ -63,7 +63,7 @@
 //     }
 //     temp[type].push(arr[i]);
 //   }
-//   for (var type in temp) {
+//   for (let type in temp) {
 //     result.push(temp[type]);
 //   }
 
