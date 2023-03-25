@@ -7,21 +7,29 @@ const output = `${items[0].textContent}, ${items[4].textContent}, ${items[1].tex
 alert(output);
 
 // task 2
-const header = document.querySelector('h1');
-const div = document.querySelector('#myDiv');
-const itsList = document.querySelector('#myList');
-const span = document.querySelector('span');
-
-
-header.style.fontSize = '60px';
+const header = document.getElementsByTagName("h1");
+header.style.fontSize = "60px";
 header.style.textAlign = 'center';
-div.style.display = 'flex';
-div.style.flexDirection = 'column';
-div.style.alignItems = 'center';
-list.style.display = 'flex';
-list.style.flexDirection = 'row';
-list.style.justifyContent = 'space-around';
-span.style.display = 'none';
+header.style.color = "blue";
+
+const div = document.getElementById("myDiv");
+div.style.display = "flex";
+div.style.flexDirection = "column";
+div.style.alignItems = "center";
+
+const itsList = document.getElementById("myList");
+itsList.style.display = "flex";
+itsList.style.flexDirection = "row";
+itsList.style.justifyContent = "space-around";
+
+const span = document.getElementsByTagNamer("span");
+span.style.display = "none";
+
+
+
+
+
+
 
 
 // task 3

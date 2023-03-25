@@ -61,3 +61,5 @@
 // console.log(day);
 // console.log(month1);
 // console.log(month2);
+
+// create simple carusel
