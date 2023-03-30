@@ -7,7 +7,7 @@ const output = `${items[0].textContent}, ${items[4].textContent}, ${items[1].tex
 alert(output);
 
 // task 2
-const header = document.getElementsByTagName("h1");
+const header = document.getElementByTagName("h1");
 header.style.fontSize = "60px";
 header.style.textAlign = 'center';
 header.style.color = "blue";
@@ -22,7 +22,7 @@ itsList.style.display = "flex";
 itsList.style.flexDirection = "row";
 itsList.style.justifyContent = "space-around";
 
-const span = document.getElementsByTagNamer("span");
+const span = document.getElementByTagNamer("span");
 span.style.display = "none";
 
 
@@ -73,39 +73,68 @@ btn.onclick = function() {
 
 // task 5
 
-const colors = document.querySelectorAll('.color');
-const gradients = document.querySelectorAll('.gradient');
-const shoeImg = document.querySelector('.shoe.show');
-const shoeName = document.querySelector('.shoeName h1');
-const price = document.querySelector('#outprice');
-const description = document.querySelector('.description .text');
+
+const colorButtonsConteiner = document.querySelector(".color");
+const sizeButtonsConteiner = document.querySelector("");
+
+const price = document.getElementById("outprice");
+colorButtonsConteiner.addEventListener("click", (event) => changeColor(event));
+sizeButtonsConteiner.addEventListener("click", (event) => changeSize(event));
+
+function changeColor(event) {
+  if (event.target.classList.contains("color")){
+    const activeColor = document.querySelector(".colors .active");
+    activeColor.classList.remove("active");
+    event.target.classList.add("active");
+    const newPrice = event.target.getAttribute("data-price");
+    price.innerText = newPrice;
+  }
+}
+
+function changeSize(event) {
+  if (event.target.classList.contains("")) {
+    const activeColor = document.querySelector(".size . active");
+    activeColor.classList.remove("active");
+    event.target.classList.add("active");
+    const newPrice = event.target.getAttribute("data-price");
+    price.innerText = newPrice;
+  }
+}
 
 
-colors.forEach(color => {
-  color.addEventListener('click', () => {
+// const colors = document.querySelectorAll('.color');
+// const gradients = document.querySelectorAll('.gradient');
+// const shoeImg = document.querySelector('.shoe.show');
+// const shoeName = document.querySelector('.shoeName h1');
+// const price = document.querySelector('#outprice');
+// const description = document.querySelector('.description .text');
+
+
+// colors.forEach(color => {
+//   color.addEventListener('click', () => {
    
-    colors.forEach(c => c.classList.remove('active'));
+//     colors.forEach(c => c.classList.remove('active'));
 
    
-    color.classList.add('active');
+//     color.classList.add('active');
 
     
-    gradients.forEach(g => {
-      g.classList.remove('first');
-      g.classList.add('second');
-      if (g.getAttribute('color') === color.getAttribute('color')) {
-        g.classList.remove('second');
-        g.classList.add('first');
-      }
-    });
+//     gradients.forEach(g => {
+//       g.classList.remove('first');
+//       g.classList.add('second');
+//       if (g.getAttribute('color') === color.getAttribute('color')) {
+//         g.classList.remove('second');
+//         g.classList.add('first');
+//       }
+//     });
 
-    shoeImg.src = `https://i.postimg.cc/${color.getAttribute('color')}.png`;
+//     shoeImg.src = `https://i.postimg.cc/${color.getAttribute('color')}.png`;
 
   
-    shoeName.innerText = `Nike Zoom KD 12 (${color.getAttribute('color')})`;
-    description.innerText = `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's. (${color.getAttribute('color')})`;
+//     shoeName.innerText = `Nike Zoom KD 12 (${color.getAttribute('color')})`;
+//     description.innerText = `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's. (${color.getAttribute('color')})`;
 
     
-    price.innerText = color.getAttribute('data-price');
-  });
-});
+//     price.innerText = color.getAttribute('data-price');
+//   });
+// });
