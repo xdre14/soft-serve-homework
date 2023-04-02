@@ -108,6 +108,6 @@
 // findUnique([ 2, 4, 3, 5, 8]);
 
 
-const arr = [ 3, 2, 1];
-const arrNew = arr[0] + 'biger' + arr[1] + 'and bigger' + arr[2];
-console.log(arrNew);
+// const arr = [ 3, 2, 1];
+// const arrNew = arr[0] + 'biger' + arr[1] + 'and bigger' + arr[2];
+// console.log(arrNew);
