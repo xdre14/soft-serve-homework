@@ -18,26 +18,13 @@ $('h3 + div').each(function() {
   });
 
 //   task 4 
-// $(document).ready(function() {
-//    const checkboxes = $('input[type="checkbox"]');
-//     checkboxes.on('change', function() {
-//      const checkedBoxes = $('input[type="checkbox"]:checked');
-//       if (checkedBoxes.length === 3) {
-//         checkboxes.attr('disabled', true);
-//       }
-//     });
-//   });
-
 $(document).ready(function() {
-    // зберігаємо всі чекбокси у змінну checkboxes
-    var checkboxes = $('input[type="checkbox"]');
-    // прив'язуємо функцію до події "click" на всі чекбокси
-    checkboxes.on('click', function() {
-      // знаходимо всі відмічені чекбокси
-      var checkedBoxes = $('input[type="checkbox"]:checked');
-      // якщо вибрано 3 чекбокси, робимо всі чекбокси неактивними
+   const checkboxes = $('input[type="checkbox"]');
+    checkboxes.on('change', function() {
+     const checkedBoxes = $('input[type="checkbox"]:checked');
       if (checkedBoxes.length === 3) {
         checkboxes.attr('disabled', true);
       }
     });
   });
+
