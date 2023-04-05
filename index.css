@@ -1,3 +1,6 @@
+.body {
+    margin-left: 100px;
+}
 .box{
     width: 100%;
     display: flex;
@@ -568,3 +571,23 @@ body{
     background-size: cover;
     cursor: pointer;
   }
+
+  /* JQUERY  */
+  .red{
+    color: red;
+}
+
+.weight800{
+    font-weight: 800;
+}
+
+.el{
+    width: 100px;
+    height: 33px;
+    border: 1px solid black;
+}
+
+.selected{
+    background-color: aqua;
+}
+  /* JQUERY  */
