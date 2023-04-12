@@ -22,7 +22,7 @@ $(document).ready(function() {
    const checkboxes = $('input[type="checkbox"]');
     checkboxes.on('change', function() {
      const checkedBoxes = $('input[type="checkbox"]:checked');
-      if (checkedBoxes.length === 3) {
+      if (checkedBoxes.length >= 3) {
         checkboxes.attr('disabled', true);
       }
     });
